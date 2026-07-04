@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho de Compras</title>
+<style>
+    body{ font-family:Arial, sans-serif; margin:0; background:#f4f4f4; }
+    header{ background:#0d6efd; color:white; text-align:center; padding:20px; }
+    nav{ background:#333; padding:10px; text-align:center; }
+    nav a{ color:white; text-decoration:none; margin:15px; }
+    .container{ width:90%; margin:auto; margin-top:20px; background:white; padding:20px; border-radius:8px; }
+    table{ width:100%; border-collapse:collapse; }
+    th{ background:#0d6efd; color:white; padding:12px; }
+    td{ border:1px solid #ccc; padding:10px; text-align:center; }
+    img{ width:80px; }
+    .total{ text-align:right; margin-top:20px; font-size:20px; }
+    button{ background:#28a745; color:white; border:none; padding:12px 20px; cursor:pointer; border-radius:5px; }
+    button:hover{ background:#218838; }
+    .btn-qtd { padding: 4px 10px; background: #6c757d; font-weight: bold; margin: 0 5px; }
+    footer{ background:#333; color:white; text-align:center; padding:15px; margin-top:20px; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Minha Loja</h1>
+</header>
+
+<nav>
+    <a href="sobre.html">Sobre</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="../index.html">Início</a>
+</nav>
+
+<div class="container">
+    <h2>Carrinho de Compras</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-carrinho">
+            </tbody>
+    </table>
+
+    <div class="total">
+        <p id="total-carrinho"><strong>Total: R$ 0,00</strong></p>
+        <button id="btn-finalizar">Finalizar Compra</button>
+    </div>
+</div>
+
+<footer>
+    © 2026 - Minha Loja
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

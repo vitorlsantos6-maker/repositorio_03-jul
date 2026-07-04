@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Minha Loja</h1>
+    <p>Os melhores produtos com os melhores preços</p>
+</header>
+
+<nav>
+    <a href="../index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="cadastro.html">Cadastro</a>
+</nav>
+
+<div class="container">
+
+    <section id="formulario">
+        <h3>Cadastro</h3>
+
+        <form id="pessoa">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="input01" required maxlength="60" placeholder="Digite seu Nome">
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="input01" required maxlength="14" placeholder="Digite seu CPF">
+
+            <label for="data-nascimento">Data Nascimento</label>
+            <input type="date" name="data-nascimento" id="data-nascimento" class="input02" required>
+
+            <br><br>
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" id="sexoM" class="inputOP" value="M"> Masculino
+            <input type="radio" name="sexo" id="sexoF" class="inputOP" value="F"> Feminino
+            <input type="radio" name="sexo" id="sexoN" class="inputOP" value="N"> Não quero Declarar
+            <br><br>
+
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" class="input02" required maxlength="9" placeholder="Digite seu CEP">
+
+            <div id="div-dados-endereço" class="oculto">
+                <br>
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" id="logradouro" class="input01">
+
+                <label for="num-residencia">Número</label>
+                <input type="text" name="num-residencia" id="num-residencia" class="input01" maxlength="10" placeholder="Digite o número da residência">
+
+                <label for="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento" class="input01" maxlength="100" placeholder="Digite o complemento se houver">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" class="input01">
+
+                <label for="localidade">Localidade</label>
+                <input type="text" name="localidade" id="localidade" class="input01">
+
+                <label for="uf">UF</label>
+                <input type="text" name="uf" id="uf" class="input02">
+            </div>
+
+            <br>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" class="input02" required maxlength="6" placeholder="Informe a senha">
+
+            <br><br>
+            <div id="div-btns">
+                <button type="submit" id="btn-add" style="background:#28a745; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;">Cadastro</button>
+                <button type="reset" id="btn-limpar" style="background:#6c757d; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;">Limpar</button>
+            </div>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>
+        © 2026 Minha Loja - Todos os direitos reservados.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
