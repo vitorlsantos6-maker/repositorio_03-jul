@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+<script src="../js/pagamentos.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Minha Loja</h1>
+    <p>Os melhores produtos com os melhores preços</p>
+</header>
+
+<nav>
+    <a href="../index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="carrinho.html">Carrinho</a>
+    <a href="cadastro.html">Cadastro</a>
+</nav>
+
+<div class="container">
+
+    <h2>Resumo da Compra</h2>
+<table>
+    <tbody id="lista-pagamento">
+        </tbody>
+</table>
+<p id="valor-total">
+    <strong>Total: R$ 0,00</strong>
+</p>
+
+    <h2>Forma de Pagamento</h2>
+
+    <form id="form-pagamento">
+
+        <input type="radio" name="pagamento" value="pix" checked> PIX
+        <br><br>
+
+        <input type="radio" name="pagamento" value="cartao"> Cartão de Crédito
+        <br><br>
+
+        <input type="radio" name="pagamento" value="boleto"> Boleto Bancário
+        <br><br>
+
+        <div id="dados-cartao">
+            <label>Número do Cartão</label><br>
+            <input type="text" id="numero-cartao"><br><br>
+
+            <label>Nome impresso</label><br>
+            <input type="text" id="nome-cartao"><br><br>
+
+            <label>Validade</label><br>
+            <input type="month" id="validade"><br><br>
+
+            <label>CVV</label><br>
+            <input type="password" maxlength="3" id="cvv">
+        </div>
+
+        <br>
+
+        <button type="submit">Confirmar Pagamento</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>© 2026 Minha Loja - Todos os direitos reservados.</p>
+</footer>
+
+
+
+</body>
+</html>

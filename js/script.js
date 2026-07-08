@@ -18,16 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const btnFinalizar = document.getElementById('btn-finalizar');
         if (btnFinalizar) {
-            btnFinalizar.addEventListener('click', () => {
-                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-                if (carrinho.length === 0) {
-                    alert('Seu carrinho está vazio!');
-                    return;
-                }
-                alert('Compra finalizada com sucesso!');
-                localStorage.removeItem('carrinho');
-                exibirCarrinho();
-            });
+           btnFinalizar.addEventListener('click', () => {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+    }
+
+    // Redireciona para a página de pagamento
+    window.location.href = "../paginas/pagamentos.html";
+}); 
         }
     }
 });
@@ -102,3 +103,30 @@ window.alterarQuantidade = function(index, mudanca) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     exibirCarrinho();
 };
+document.addEventListener("DOMContentLoaded", () => {
+
+    const lista = document.getElementById("lista-pagamento");
+    const total = document.getElementById("valor-total");
+
+    if (!lista || !total) return;
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    let totalGeral = 0;
+
+    carrinho.forEach(item => {
+
+        let subtotal = item.preco * item.quantidade;
+        totalGeral += subtotal;
+
+        lista.innerHTML += `
+            <tr>
+                <td>${item.nome}</td>
+                <td>${item.quantidade}</td>
+                <td>R$ ${subtotal.toFixed(2).replace(".", ",")}</td>
+            </tr>
+        `;
+    });
+
+    total.innerHTML = `<strong>Total: R$ ${totalGeral.toFixed(2).replace(".", ",")}</strong>`;
+});
